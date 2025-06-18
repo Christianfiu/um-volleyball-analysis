@@ -1,2 +1,3 @@
 # UM-volleyball-analysis
-# new changes hello
+# UMich Womens' Volleyball Analysis
+## Author: Christian Fiuczynski
