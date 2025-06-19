@@ -58,7 +58,9 @@ I first selected to investigate the `efficiency` column that I am trying to pred
   frameborder="0"
 ></iframe>
 
-I also plotted the This box plot shows how both teams attack efficiency varies across sets, with a comparison between red zone and non-red zone rallies. It reveals a drop in efficiency during red zone moments in later sets, highlighting how game pressure impacts performance, providing an insight directly relevant to our goal of predicting success under match conditions.
+## Bivariate Analysis
+
+I also plotted how both teams attack efficiency varies across sets, with a comparison between red zone and non-red zone rallies. It reveals a drop in efficiency during red zone moments in later sets, highlighting how game pressure impacts performance, providing an insight directly relevant to our goal of predicting success under match conditions.
 
 <iframe
   src="assets/red-zone-eff.html"
@@ -66,3 +68,4 @@ I also plotted the This box plot shows how both teams attack efficiency varies a
   height="600"
   frameborder="0"
 ></iframe>
+
