@@ -86,4 +86,22 @@ The goal of this project is to predict the success of an attack during a volleyb
 
 I chose `efficiency` as the response variable because it is a core measure of player and team performance in volleyball. Predicting attack efficiency allows coaches and analysts to identify patterns that lead to successful plays, optimize strategies, and evaluate individual player tendencies.
 
-To evaluate model performance, I used the weighted F1-score. This metric balances both precision and recall, and it accounts for class imbalance by weighting each class according to its frequency. Compared to accuracy, the F1-score provides a more nuanced assessment in cases where certain outcomes (like errors or kills) are less common but highly important.
+To evaluate model performance, I used the F1-score. This metric balances both precision and recall, and it accounts for class imbalance by weighting each class according to its frequency. Compared to accuracy, the F1-score provides a more nuanced assessment in cases where certain outcomes (like errors or kills) are less common but highly important.
+
+## Baseline Model
+
+My baseline model is a multiclass classification model using a RandomForestClassifier to predict efficiency, which takes on values of -1.0, 0.0, or 1.0, corresponding to errors, neutral plays, and successful attacks respectively. The model uses four features: set_number (ordinal), rally_number (quantitative), red_zone (binary/nominal), and player_name (nominal). I encoded the nominal player_name feature using OneHotEncoder, while the remaining numerical features were passed through without scaling, as Random Forest models are not sensitive to feature scaling.
+
+The model achieved an accuracy of **54%**, with a macro average F1-score of 0.44. While this performance is modest, it's reasonable given the class imbalance and small dataset. The model struggles particularly with predicting the -1.0 class, but performs better for 0.0 and 1.0, suggesting it may capture some useful patterns for neutral and successful plays. There's  room for improvement through additional feature engineering or balancing techniques.
+
+### Classification Report for Baseline Model
+
+              precision    recall  f1-score   support
+
+        -1.0       0.20      0.15      0.17        39
+         0.0       0.64      0.64      0.64       178
+         1.0       0.49      0.52      0.50       107
+
+    accuracy                           0.54       324
+   macro avg       0.44      0.44      0.44       324
+weighted avg       0.53      0.54      0.54       324
