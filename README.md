@@ -46,4 +46,3 @@ From the datavolley library, there is a 'read_cv' function responsible for readi
 | Indiana University, Bloomington | Camryn Haworth | Set       | #                 |            1 |              1 |                 1 |                     0 | False      |            1 |
 | Indiana University, Bloomington | Avry Tatum     | Attack    | #                 |            1 |              1 |                 1 |                     0 | False      |            1 |
 | University of Michigan          | Morgan Burke   | Dig       | =                 |            1 |              1 |                 1 |                     0 | False      |           -1 |
-| Indiana University, Bloomington | 0              | Point     | 0                 |            1 |              1 |                 1 |                     0 | False 
