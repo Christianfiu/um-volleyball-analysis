@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This dataset captures play-by-play data from a University of Michigan women's volleyball match collected via DataVolley, totaling 1,616 rows of in game actions such as serves, digs, blocks, and attacks. The question I try to answer is if we can predict whether a player's attack will be successful based on contextual features in the game. The relevant column names are `team`, `opponent`, `player_name`, `skill`, `evaluation_code`, `set_number`, `rally_number`, `video_time`, `score`, `point_won_by`, `home_score`, `away_score`, `red_zone`, and `efficiency`.
+This dataset captures play-by-play data from a University of Michigan women's volleyball match against Indiana University, Bloomington, collected via DataVolley, totaling 1,616 rows of in game actions such as serves, digs, blocks, and attacks. The question I try to answer is if we can predict whether a player's attack will be successful based on contextual features in the game. The relevant column names are `team`, `opponent`, `player_name`, `skill`, `evaluation_code`, `set_number`, `rally_number`, `video_time`, `score`, `point_won_by`, `home_score`, `away_score`, `red_zone`, and `efficiency`.
 The `player_name` column identifies the athlete performing the action. `set_number` and `rally_number` provide temporal context, indicating when in the match the action occurred. `red_zone` is a binary variable indicating whether both teams had more than 20 points and the difference was within 2 points. Lastly, `efficiency` is translated column from `evaluation code` that quantifies attack outcomes: 1 for a kill, 0 for a neutral result, and -1 for an error or blocked attack.
 
 ## Data Cleaning and Exploratory Data Analysis
@@ -33,7 +33,7 @@ True;;;;;15;
 0;14;12;;;;;;-426783;Heaney;Grace;Heaney;;;False;;;
 ---
 
-From the datavolley library, there is a 'read_cv' function responsible for reading '.dvw' files. Once the file has been read, the dataframe can be created by calling the '.get_plays()' method. 
+From the datavolley library, there is a `read_cv` function responsible for reading `.dvw` files. Once the file has been read, the dataframe can be created by calling the `.get_plays()` method. 
 
 | team                            | player_name    | skill     | evaluation_code   |   set_number |   rally_number |   home_team_score |   visiting_team_score | red_zone   |   efficiency |
 |:--------------------------------|:---------------|:----------|:------------------|-------------:|---------------:|------------------:|----------------------:|:-----------|-------------:|
@@ -46,3 +46,14 @@ From the datavolley library, there is a 'read_cv' function responsible for readi
 | Indiana University, Bloomington | Camryn Haworth | Set       | #                 |            1 |              1 |                 1 |                     0 | False      |            1 |
 | Indiana University, Bloomington | Avry Tatum     | Attack    | #                 |            1 |              1 |                 1 |                     0 | False      |            1 |
 | University of Michigan          | Morgan Burke   | Dig       | =                 |            1 |              1 |                 1 |                     0 | False      |           -1 |
+
+## Univariate Analysis
+
+I first selested to investigate the `efficiency` column that I am trying to predict. The plot below shows that most Umich attacks are rated with 0 efficiency, indicating neutral outcomes (e.g., attacks that don’t immediately result in a point or error). Positive outcomes (1, kills) are more common than negative ones (-1, blocks or errors), suggesting an overall balanced but slightly offense-leaning dataset. This trend supports our prediction goal by highlighting the class distribution and potential need for balanced classification techniques.
+
+<iframe
+  src="assets/dist-atk-eff.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
