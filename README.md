@@ -80,3 +80,10 @@ This pivot table compares each Michigan player's average attack efficiency in re
   frameborder="0"
 ></iframe>
 
+## Framing a Prediction Problem
+
+The goal of this project is to predict the success of an attack during a volleyball rally, based on contextual features like player identity, set number, and court zone position. This is a multiclass classification problem because the response variable, `efficiency`, has three possible values: 1.0 (successful attack or kill), 0.0 (neutral or returned), and -1.0 (error or blocked). These values represent different levels of effectiveness, making it important to distinguish between more than two categories.
+
+I chose `efficiency` as the response variable because it is a core measure of player and team performance in volleyball. Predicting attack efficiency allows coaches and analysts to identify patterns that lead to successful plays, optimize strategies, and evaluate individual player tendencies.
+
+To evaluate model performance, I used the weighted F1-score. This metric balances both precision and recall, and it accounts for class imbalance by weighting each class according to its frequency. Compared to accuracy, the F1-score provides a more nuanced assessment in cases where certain outcomes (like errors or kills) are less common but highly important.
