@@ -54,7 +54,7 @@ I first selected to investigate the `efficiency` column that I am trying to pred
 <iframe
   src="assets/dist-atk-eff.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 
@@ -65,7 +65,7 @@ I also plotted how both teams attack efficiency varies across sets, with a compa
 <iframe
   src="assets/red-zone-eff.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 
@@ -79,3 +79,4 @@ This pivot table compares each Michigan player's average attack efficiency in re
   height="600"
   frameborder="0"
 ></iframe>
+
