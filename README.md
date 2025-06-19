@@ -33,3 +33,17 @@ True;;;;;15;
 0;14;12;;;;;;-426783;Heaney;Grace;Heaney;;;False;;;
 ---
 
+From the datavolley library, there is a 'read_cv' function responsible for reading '.dvw' files. Once the file has been read, the dataframe can be created by calling the '.get_plays()' method. 
+
+| team                            | player_name    | skill     | evaluation_code   |   set_number |   rally_number |   home_team_score |   visiting_team_score | red_zone   |   efficiency |
+|:--------------------------------|:---------------|:----------|:------------------|-------------:|---------------:|------------------:|----------------------:|:-----------|-------------:|
+| Indiana University, Bloomington | Camryn Haworth | Serve     | -                 |            1 |              1 |                 1 |                     0 | False      |            0 |
+| University of Michigan          | Maddi Cuchran  | Reception | +                 |            1 |              1 |                 1 |                     0 | False      |            0 |
+| University of Michigan          | Morgan Burke   | Set       | #                 |            1 |              1 |                 1 |                     0 | False      |            1 |
+| University of Michigan          | Amalia Simmons | Attack    | -                 |            1 |              1 |                 1 |                     0 | False      |            0 |
+| Indiana University, Bloomington | Madi Sell      | Block     | +                 |            1 |              1 |                 1 |                     0 | False      |            0 |
+| Indiana University, Bloomington | Ramsey Gary    | Dig       | #                 |            1 |              1 |                 1 |                     0 | False      |            1 |
+| Indiana University, Bloomington | Camryn Haworth | Set       | #                 |            1 |              1 |                 1 |                     0 | False      |            1 |
+| Indiana University, Bloomington | Avry Tatum     | Attack    | #                 |            1 |              1 |                 1 |                     0 | False      |            1 |
+| University of Michigan          | Morgan Burke   | Dig       | =                 |            1 |              1 |                 1 |                     0 | False      |           -1 |
+| Indiana University, Bloomington | 0              | Point     | 0                 |            1 |              1 |                 1 |                     0 | False 
