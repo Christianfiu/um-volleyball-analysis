@@ -12,25 +12,25 @@ The `player_name` column identifies the athlete performing the action. `set_numb
 This dataset was originally a `.dvw` file as opposed to a standard `.csv`. An example of this file pre-parsed looks like this:
 
 ---
-[3SET]
-True;2-8;6-16;8-21;14-25;25;
-True;4-8;8-16;15-21;21-25;25;
-True;4-8;14-16;18-21;20-25;25;
-True;;;;;25;
-True;;;;;15;
-[3PLAYERS-H]
-0;1;1;;;*;;;-416101;Williams;Rachel;Williams;;;False;;;
-0;2;2;3;3;1;;;-416098;Chicoine;Chloe;Chicoine;;;False;;;
-0;3;3;*;*;6;;;-478520;McAleer;Ryan;McAleer;;;False;;;
-0;4;4;2;2;*;;;-416099;Wollard;Kenna;Wollard;;;False;;;
-0;5;5;5;5;3;;;-426784;Anderson;Taylor;Anderson;;;False;;;
-0;6;6;;;;;;-490950;Foster;Sienna;Foster;;;False;;;
-0;7;7;4;4;2;;;-332942;Colvin;Raven;Colvin;;;False;;;
-0;8;8;;;;;;-510312;Gray;Raven;Gray;;;False;;;
-0;9;9;1;1;5;;;-385034;Meyers;Lourdes;Meyers;;;False;;;
-0;10;10;*;*;*;;;-332941;Hornung;Ali;Hornung;;;False;;;
-0;11;11;;;;;;-479694;Shondell;Allie;Shondell;;;False;;;
-0;14;12;;;;;;-426783;Heaney;Grace;Heaney;;;False;;;
+## [3SET]
+## True;2-8;6-16;8-21;14-25;25;
+## True;4-8;8-16;15-21;21-25;25;
+## True;4-8;14-16;18-21;20-25;25;
+## True;;;;;25;
+## True;;;;;15;
+## [3PLAYERS-H]
+## 0;1;1;;;*;;;-416101;Williams;Rachel;Williams;;;False;;;
+## 0;2;2;3;3;1;;;-416098;Chicoine;Chloe;Chicoine;;;False;;;
+## 0;3;3;*;*;6;;;-478520;McAleer;Ryan;McAleer;;;False;;;
+## 0;4;4;2;2;*;;;-416099;Wollard;Kenna;Wollard;;;False;;;
+## 0;5;5;5;5;3;;;-426784;Anderson;Taylor;Anderson;;;False;;;
+## 0;6;6;;;;;;-490950;Foster;Sienna;Foster;;;False;;;
+## 0;7;7;4;4;2;;;-332942;Colvin;Raven;Colvin;;;False;;;
+## 0;8;8;;;;;;-510312;Gray;Raven;Gray;;;False;;;
+## 0;9;9;1;1;5;;;-385034;Meyers;Lourdes;Meyers;;;False;;;
+## 0;10;10;*;*;*;;;-332941;Hornung;Ali;Hornung;;;False;;;
+## 0;11;11;;;;;;-479694;Shondell;Allie;Shondell;;;False;;;
+## 0;14;12;;;;;;-426783;Heaney;Grace;Heaney;;;False;;;
 ---
 
 From the datavolley library, there is a `read_cv` function responsible for reading `.dvw` files. Once the file has been read, the dataframe can be created by calling the `.get_plays()` method. 
