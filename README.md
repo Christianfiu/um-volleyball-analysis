@@ -49,10 +49,19 @@ From the datavolley library, there is a `read_cv` function responsible for readi
 
 ## Univariate Analysis
 
-I first selested to investigate the `efficiency` column that I am trying to predict. The plot below shows that most Umich attacks are rated with 0 efficiency, indicating neutral outcomes (e.g., attacks that don’t immediately result in a point or error). Positive outcomes (1, kills) are more common than negative ones (-1, blocks or errors), suggesting an overall balanced but slightly offense-leaning dataset. This trend supports our prediction goal by highlighting the class distribution and potential need for balanced classification techniques.
+I first selected to investigate the `efficiency` column that I am trying to predict. The plot below shows that most Umich attacks are rated with 0 efficiency, indicating neutral outcomes (e.g., attacks that don’t immediately result in a point or error). Positive outcomes (1, kills) are more common than negative ones (-1, blocks or errors), suggesting an overall balanced but slightly offense-leaning dataset. This trend supports our prediction goal by highlighting the class distribution and potential need for balanced classification techniques.
 
 <iframe
   src="assets/dist-atk-eff.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+I also plotted the This box plot shows how both teams attack efficiency varies across sets, with a comparison between red zone and non-red zone rallies. It reveals a drop in efficiency during red zone moments in later sets, highlighting how game pressure impacts performance, providing an insight directly relevant to our goal of predicting success under match conditions.
+
+<iframe
+  src="assets/red-zone-eff.html"
   width="800"
   height="600"
   frameborder="0"
