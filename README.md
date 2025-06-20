@@ -1,5 +1,3 @@
-# UMich Women's Volleyball Analysis
-
 #### Author: Christian Fiuczynski
 
 ## Introduction
