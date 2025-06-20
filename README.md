@@ -76,7 +76,7 @@ This pivot table compares each Michigan player's average attack efficiency in re
 <iframe
   src="assets/pivot-red-zone.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 
@@ -129,7 +129,7 @@ For the modeling algorithm, I used a RandomForestClassifier with class_weight='b
 <iframe
   src="assets/final-conf-mat.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 
