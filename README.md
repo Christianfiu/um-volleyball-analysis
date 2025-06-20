@@ -33,7 +33,7 @@ True;;;;;15;
 0;14;12;;;;;;-426783;Heaney;Grace;Heaney;;;False;;;
 ---
 
-From the datavolley library, there is a `read_cv` function responsible for reading `.dvw` files. Once the file has been read, the dataframe can be created by calling the `.get_plays()` method. 
+From the datavolley library, there is a read_dv function responsible for reading .dvw files. Once the file has been read, the dataframe can be created by calling the .get_plays() method. These two steps together handle the majority of the data cleaning process internally. The read_dv function parses the structured text file format used by DataVolley, extracting key sections such as player rosters, set scores, and rally-level details. When .get_plays() is called, it returns a tidy pandas DataFrame where each row represents a single in-game action (e.g., Serve, Set, Attack), with relevant metadata such as player_name, skill, evaluation_code, set_number, rally_number, and team scores already decoded and aligned. This function also maps internal shorthand codes to human-readable labels and filters out non-play rows or metadata, meaning that minimal manual cleaning is required. As a result, the dataset is ready for immediate exploration and modeling without significant preprocessing, making the analysis pipeline much more efficient.
 
 | team                            | player_name    | skill     | evaluation_code   |   set_number |   rally_number |   home_team_score |   visiting_team_score | red_zone   |   efficiency |
 |:--------------------------------|:---------------|:----------|:------------------|-------------:|---------------:|------------------:|----------------------:|:-----------|-------------:|
@@ -132,3 +132,15 @@ For the modeling algorithm, I used a RandomForestClassifier with class_weight='b
   height="600"
   frameborder="0"
 ></iframe>
+
+## Conclusion
+From this exploration of the Michigan Women’s Volleyball attack data, I found that predicting the efficiency of an offensive play is a challenging task, but not without meaningful insights. When building a model to classify attack efficiency using features such as player_name, set_number, rally_number, and red_zone, our final model achieved a weighted F1-score of approximately **0.59**. Given the imbalance and limited sample size in some efficiency classes (especially low-efficiency attacks), this result is promising. The classification task proved difficult due to subtle differences in the input features and limited observable patterns in rally dynamics alone. However, the modeling process revealed that certain players and set contexts—like late set rallies or red zone conditions—can influence attack outcomes. For future research, incorporating spatial data (such as attack location or block positioning) or richer contextual features (like pass quality or opponent positioning) could offer stronger predictive signals. It would also be beneficial to utilize a larger dataset. Overall, this project illustrates the complexity of performance analytics in volleyball and highlights the value of structured data in driving tactical insight.
+
+
+
+
+
+
+
+
+
