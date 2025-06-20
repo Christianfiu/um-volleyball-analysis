@@ -71,7 +71,7 @@ I also plotted how both teams attack efficiency varies across sets, with a compa
 
 ## Interesting Aggregates
 
-This pivot table compares each Michigan player's average attack efficiency in red zone versus non-red zone situations. It reveals how performance varies under pressure—some players maintain consistent efficiency, while others see noticeable drops or improvements in red zone contexts. These insights help identify which players are most reliable during critical scoring moments.
+This pivot table compares each Michigan player's average attack efficiency in red zone versus non-red zone situations. It reveals how performance varies under pressure—some players maintain consistent efficiency, while others see noticeable drops or improvements in red zone contexts. These insights help identify which players are most reliable during critical scoring moments. Players without red zone efficiencies means they were not in the game at that time or, if they were, did not attack.
 
 <iframe
   src="assets/pivot-red-zone.html"
