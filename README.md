@@ -103,10 +103,8 @@ The model achieved an accuracy of **54%**, with a macro average F1-score of 0.44
          1.0       0.49      0.52      0.50       107
 
     accuracy                           0.54       324
-   macro avg       0.44      0.44      0.44       324
-weighted avg       0.53      0.54      0.54       324
-
-# add confusion matrix?
+    macro avg      0.44      0.44      0.44       324
+    weighted avg   0.53      0.54      0.54       324
 
 ## Final Model
 
@@ -121,11 +119,12 @@ For the modeling algorithm, I used a RandomForestClassifier with class_weight='b
         -1.0       0.15      0.26      0.19        31
          0.0       0.73      0.69      0.71       200
          1.0       0.56      0.51      0.53        93
+
     accuracy                           0.59       324
     macro avg      0.48      0.48      0.48       324
     weighted avg   0.63      0.59      0.61       324
 
-## Confusion Matrix for Final Model
+#### Confusion Matrix for Final Model
 
 <iframe
   src="assets/final-conf-mat.html"
