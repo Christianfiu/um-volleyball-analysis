@@ -105,3 +105,31 @@ The model achieved an accuracy of **54%**, with a macro average F1-score of 0.44
     accuracy                           0.54       324
    macro avg       0.44      0.44      0.44       324
 weighted avg       0.53      0.54      0.54       324
+
+# add confusion matrix?
+
+## Final Model
+
+In the final model, I incorporated four features: `player_name`, `set_number`, `rally_number`, and `red_zone`, selected based on their potential relevance to predicting attack outcome efficiency in volleyball. `player_name` helps capture individual performance tendencies and styles, while set_number reflects game progression, which may influence fatigue or strategic shifts. rally_number accounts for the flow and length of a point, which could correlate with complex play development, and red_zone identifies whether the play occurred in a high-pressure scoring situation. These variables collectively encode a mix of player identity, game phase, and situational context, offering a well-rounded basis for classification.
+
+For the modeling algorithm, I used a RandomForestClassifier with class_weight='balanced' to mitigate class imbalance. To enhance model generalization, I implemented a preprocessing pipeline that applied OneHotEncoder to `player_name`, StandardScaler to `rally_number`, and QuantileTransformer to `set_number`. Hyperparameters were tuned using GridSearchCV with 5 fold cross-validation, testing combinations of tree depth and number of estimators. The best performing configuration used n_estimators=100 and max_depth=10, achieving a weighted F1-score of approximately 0.59, an improvement over the baseline model, which used fewer features and lacked feature transformation. This improvement in accuracy suggests that the engineered features and tuning choices better capture patterns in the data that relate to attack efficiency.
+
+### Classification Report for Final Model
+
+              precision    recall  f1-score   support
+
+        -1.0       0.15      0.26      0.19        31
+         0.0       0.73      0.69      0.71       200
+         1.0       0.56      0.51      0.53        93
+    accuracy                           0.59       324
+    macro avg      0.48      0.48      0.48       324
+    weighted avg   0.63      0.59      0.61       324
+
+## Confusion Matrix for Final Model
+
+<iframe
+  src="assets/final-conf-mat.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
