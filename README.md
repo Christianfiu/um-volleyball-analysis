@@ -49,7 +49,7 @@ From the datavolley library, there is a read_dv function responsible for reading
 
 ## Univariate Analysis
 
-I first selected to investigate the `efficiency` column that I am trying to predict. The plot below shows that most Umich attacks are rated with 0 efficiency, indicating neutral outcomes (e.g., attacks that don’t immediately result in a point or error). Positive outcomes (1, kills) are more common than negative ones (-1, blocks or errors), suggesting an overall balanced but slightly offense-leaning dataset. This trend supports our prediction goal by highlighting the class distribution and potential need for balanced classification techniques.
+I first selected to investigate the `efficiency` column that I am trying to predict. The plot below shows that most Umich attacks are rated with 0 efficiency, indicating neutral outcomes (such as attacks that don’t immediately result in a point or error). Positive outcomes (1, kills) are more common than negative ones (-1, blocks or errors), suggesting an overall balanced but slightly offense-leaning dataset. This trend supports our prediction goal by highlighting the class distribution and potential need for balanced classification techniques.
 
 <iframe
   src="assets/dist-atk-eff.html"
